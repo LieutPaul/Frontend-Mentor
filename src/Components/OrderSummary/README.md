@@ -27,13 +27,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://vikas-frontend-mentor.netlify.app/)
+- Live Site URL: [Vikas's Order Summary](https://vikas-frontend-mentor.netlify.app/order-summary)
 
 ## My process
 
 ### Built with
 
+- React
 - CSS custom properties
 - Flexbox
 - Tailwind CSS
