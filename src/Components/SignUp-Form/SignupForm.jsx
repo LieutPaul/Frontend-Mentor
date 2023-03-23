@@ -6,11 +6,11 @@ export default function SignupForm() {
         <div className='signup-form'>
             <div className='row'>
 
-                <div className='col-sm-6 col-12 flex flex-col justify-center items-center full-height'>
+                <div className='col-sm-6 flex flex-col justify-center items-center full-height-1'>
                     <div className='heading'>Learn to code by watching others</div>
                     <div className='mt-4 subheading'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </div>
                 </div>
-                <div className='col-sm-6 flex flex-col justify-center items-center full-height'>
+                <div className='col-sm-6 flex flex-col justify-center items-center full-height-2'>
                     <div className='freetrial-box text-center'>
                         <b>Try it free 7 days</b> then $20/mo. thereafter
                     </div>
@@ -19,6 +19,13 @@ export default function SignupForm() {
                         <input type="text" placeholder="Second Name"/>
                         <input type="email" placeholder="Email"/>
                         <input type="password" placeholder="Password"/>
+                        <button>CLAIM YOUR FREE TRIAL</button>
+                        
+                        <small className='mt-2'>By clicking the button, you are agreeing to our 
+                        <span style={{"color":"rgb(238, 129, 124)"}}>
+                            <b> Terms and Services</b>
+                        </span>
+                        </small>
                     </div>
                 </div>
 
@@ -33,17 +40,5 @@ export default function SignupForm() {
     )
 }
 
-
-
-  // Try it free 7 days then $20/mo. thereafter
-
-  // First Name 
-  // Last Name 
-  // Email Address
-  // Password
-
-  // Claim your free trial 
-
-  // By clicking the button, you are agreeing to our Terms and Services
   
 
