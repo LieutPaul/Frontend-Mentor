@@ -1,0 +1,44 @@
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.signup-form{
+    background-image:url(./images/bg-intro-desktop.png);
+    background-color: rgb(238, 129, 124);
+    min-height:100vh;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    .subheading{
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        width:80%;
+    }
+    @media only screen and (min-width : 1000px) {
+        .heading{
+            width:80%;
+            font-size: 60px;
+            color:white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700 !important;
+        }
+        .full-height{
+            height: 90vh !important;
+        }
+    }
+    @media only screen and (min-width : 600px) and (max-width:999px){
+        .heading{
+            width:80%;
+            font-size: 50px;
+            color:white;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+    
+}
+

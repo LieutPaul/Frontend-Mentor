@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import OrderSummary from './Components/OrderSummary/OrderSummary';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
+import SignupForm from './Components/SignUp-Form/SignupForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,11 +15,13 @@ root.render(
         {
         <div style={{"padding":"20px"}}>
           <a href="/order-summary">/order-summary</a> : Order Summary Page
+          <br></br>
+          <a href="/signup-form">/signup-form</a> : Sign up Form
         </div>
         } 
         />
         <Route path="/order-summary" element={<OrderSummary/>}/>
-      
+        <Route path="/signup-form" element={<SignupForm/>}/>
       </Routes>
     </Router>
 );
