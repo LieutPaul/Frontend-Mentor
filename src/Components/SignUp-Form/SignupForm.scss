@@ -17,12 +17,6 @@
     background-size: cover;
     overflow-x: hidden;
     overflow-y: scroll;
-
-    .subheading{
-        color: white;
-        font-family: 'Poppins', sans-serif;
-        width:80%;
-    }
     
     .freetrial-box{
         width: 80%;
@@ -97,13 +91,50 @@
             padding-bottom:30px;
             padding-top:30px;
         }
+        .subheading{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            width:80%;
+        }
     }
     @media only screen and (min-width : 600px) and (max-width:999px){
         .heading{
+            margin-top:130px;
             width:80%;
             font-size: 50px;
+            font-weight: 700 !important;
             color:white;
             font-family: 'Poppins', sans-serif;
+        }
+        .subheading{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            width:80%;
+        }
+        .full-height-2{
+            margin-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    @media only screen and (min-width : 1px) and (max-width:599px){
+        .heading{
+            text-align: center;
+            font-weight: 700 !important;
+            margin-top: 130px;
+            width:80%;
+            font-size: 30px;
+            color:white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .subheading{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            width:80%;
+            text-align: center;
+        }
+        .full-height-2{
+            margin-top: 40px;
+            padding-bottom: 40px;
         }
     }
     

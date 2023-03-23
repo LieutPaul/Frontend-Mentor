@@ -16,13 +16,13 @@ export default function SignupForm() {
         <div className='signup-form'>
             <div className='row'>
 
-                <div className='col-sm-6 flex flex-col justify-center items-center full-height-1'>
+                <div className='col-lg-6 col-12 flex flex-col justify-center items-center full-height-1'>
                     <div className='heading'>Learn to code by watching others</div>
                     <div className='mt-4 subheading'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </div>
                 </div>
-                <div className='col-sm-6 flex flex-col justify-center items-center full-height-2'>
+                <div className='col-lg-6 col-12 flex flex-col justify-center items-center full-height-2'>
                     
-                    <div className='freetrial-box text-center'>
+                    <div className='freetrial-box text-center ps-2 pe-2'>
                         <b>Try it free 7 days</b> then $20/mo. thereafter
                     </div>
 
@@ -63,12 +63,13 @@ export default function SignupForm() {
                         <button onClick={()=>{
                             runChecks();
                         }}>CLAIM YOUR FREE TRIAL</button>
-                        
-                        <small className='mt-2 mb-4'>By clicking the button, you are agreeing to our 
+                        <div className='mt-2 mb-4' style={{"width":"80%"}}>
+                        <small>By clicking the button, you are agreeing to our 
                         <span style={{"color":"rgb(238, 129, 124)"}}>
                             <b> Terms and Services</b>
                         </span>
                         </small>
+                        </div>
                     </div>
                 </div>
 
