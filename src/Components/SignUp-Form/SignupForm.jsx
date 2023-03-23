@@ -10,8 +10,16 @@ export default function SignupForm() {
                     <div className='heading'>Learn to code by watching others</div>
                     <div className='mt-4 subheading'>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </div>
                 </div>
-                <div className='col-sm-6 flex justify-center items-center full-height'>
-
+                <div className='col-sm-6 flex flex-col justify-center items-center full-height'>
+                    <div className='freetrial-box text-center'>
+                        <b>Try it free 7 days</b> then $20/mo. thereafter
+                    </div>
+                    <div className='signup-box mt-4 flex flex-col items-center'>
+                        <input type="text" placeholder="First Name"/>
+                        <input type="text" placeholder="Second Name"/>
+                        <input type="email" placeholder="Email"/>
+                        <input type="password" placeholder="Password"/>
+                    </div>
                 </div>
 
             </div>
@@ -26,8 +34,6 @@ export default function SignupForm() {
 }
 
 
-  // See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  // but understanding how developers think is invaluable. 
 
   // Try it free 7 days then $20/mo. thereafter
 
