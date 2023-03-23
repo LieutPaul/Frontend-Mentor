@@ -3,6 +3,11 @@ import './SignupForm.scss'
 
 export default function SignupForm() {
 
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
     const [onceSubmitted,setOnceSubmitted] = React.useState(false);
     const [firstName, setFirstName] = React.useState('');
     const [lastName, setLastName] = React.useState('');
@@ -49,7 +54,7 @@ export default function SignupForm() {
                         }} placeholder="Email"/>
 
                         <div className='errorMessages'>
-                            {(onceSubmitted && email.length===0) && "Email not valid"}
+                            {(onceSubmitted && validateEmail(email)===false) && "Email not valid"}
                         </div>
 
                         <input type="password" onChange={(e)=>{
@@ -62,24 +67,20 @@ export default function SignupForm() {
 
                         <button onClick={()=>{
                             runChecks();
-                        }}>CLAIM YOUR FREE TRIAL</button>
+                        }}><b>CLAIM YOUR FREE TRIAL</b></button>
+
                         <div className='mt-2 mb-4' style={{"width":"80%"}}>
-                        <small>By clicking the button, you are agreeing to our 
-                        <span style={{"color":"rgb(238, 129, 124)"}}>
-                            <b> Terms and Services</b>
-                        </span>
-                        </small>
+                            <small>By clicking the button, you are agreeing to our 
+                                <span style={{"color":"rgb(238, 129, 124)"}}>
+                                    <b> Terms and Services</b>
+                                </span>
+                            </small>
                         </div>
+                        
                     </div>
                 </div>
 
             </div>
-            {/* <footer>
-                <p class="attribution">
-                  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>. 
-                  Coded by <a href="https://github.com/LieutPaul">Vikas K</a>.
-                </p>
-            </footer> */}
         </div>
     )
 }
