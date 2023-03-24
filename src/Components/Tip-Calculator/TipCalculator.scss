@@ -13,10 +13,13 @@
         padding : 30px 30px 30px 0px;
     }
     .tip-amount{
+        padding-left: 30px;
+        padding-top: 50px;
         height:100%;
         width:100%;
         background-color: rgb(27 70 74);
         border-radius: 15px;
+        position: relative;
     }
     .bill-amount{
         height:100%;
@@ -55,13 +58,42 @@
     .h{
         height: 100% !important;
     }
-    button{
+    .tip-amount-button{
         background-color: rgb(27 70 74);
         width: 100%;
         color:white;
         height:40px;
         border-radius: 5px;
         font-weight: 700;
+    }
+    small{
+        color:rgba(108,152,156)
+    }
+    .final-amount{
+        font-size: 35px;
+        font-weight: 900;
+        text-align: right !important;
+        color:rgb(96,196,174);
+    }
+
+    .button-row{
+        width:100% !important;
+        margin-left: -30px;
+        position:absolute;
+        bottom:30px;
+    }
+    
+    .reset-button{
+        height:40px;
+        width:80%;
+        background-color: rgb(47 102 108);
+        border-radius: 5px;
+        color:rgb(0,0,1,0.15);
+        font-weight:700;
+    }
+    .reset-button:hover{
+        background-color: rgb(175,230,223);
+        color:rgb(28,70,74);
     }
 }
 
