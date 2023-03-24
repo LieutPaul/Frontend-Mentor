@@ -2,7 +2,8 @@
     min-height: 100vh;
     height:100%;
     background-color: rgb(203 227 230);
-
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400 !important;
     .h{
         height: 100% !important;
     }
@@ -30,6 +31,8 @@
             width:100%;
             padding-left:40px;
             padding-top: 5px;
+            color:rgb(105,116,116);
+            font-weight: 900;
         }
     }
     @media only screen and (min-width:1px) and (max-width : 768px){
@@ -60,6 +63,8 @@
             width:100%;
             padding-left:30px;
             padding-top: 5px;
+            color:rgb(105,116,116);
+            font-weight: 900;
         }
     }
     
