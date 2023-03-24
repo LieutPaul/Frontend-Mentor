@@ -67,7 +67,7 @@ export default function TipCalculator() {
                                         </button>
                                     </div>
                                     <div className='col-4'>
-                                        <input placeholder="Custom" className={`tip-amount-input ${typeof tipPercentage === "string" && 'selected-button'}`} onChange={(e)=>{
+                                        <input placeholder="Custom" type='number' className={`tip-amount-input ${typeof tipPercentage === "string" && 'selected-button'}`} onChange={(e)=>{
                                             changeTipPercentage(e.target.value);
                                         }} onClick={(e)=>{
                                             changeTipPercentage(e.target.value);
