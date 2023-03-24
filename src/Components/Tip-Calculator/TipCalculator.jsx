@@ -67,11 +67,13 @@ export default function TipCalculator() {
                                         </button>
                                     </div>
                                     <div className='col-4'>
-                                        <button className={`tip-amount-button ${tipPercentage === 0 && 'selected-button'}`} onClick={()=>{
-                                            changeTipPercentage(0);
+                                        <input placeholder="Custom" className={`tip-amount-input ${typeof tipPercentage === "string" && 'selected-button'}`} onChange={(e)=>{
+                                            changeTipPercentage(e.target.value);
+                                        }} onClick={(e)=>{
+                                            changeTipPercentage(e.target.value);
                                         }}>
-                                        Custom
-                                        </button>
+                                        
+                                        </input>
                                     </div>
                                 </div>
                             </div>
@@ -132,13 +134,11 @@ export default function TipCalculator() {
                                 <button className='reset-button' onClick={()=>{
                                     changeBill(0);
                                     changePeople(0);
+                                    changeTipPercentage(5);
                                 }}>RESET</button>
-                            </div>
-                            
+                            </div> 
                         </div>
-                        
                     </div>
-                
                 </div>
             </div>
         </div>
