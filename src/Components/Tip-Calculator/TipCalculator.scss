@@ -6,32 +6,61 @@
     .h{
         height: 100% !important;
     }
-
-    .tip-box{
-        margin-top: 50px;
-        height: 400px;
-        border-radius: 20px;
-        background-color:white;
-        width:100%;
-        max-width: 750px;
-        padding : 30px 30px 30px 0px;
+    @media only screen and (min-width : 768px){
+        .tip-box{
+            margin-top: 50px;
+            height: 400px;
+            border-radius: 20px;
+            background-color:white;
+            width:100%;
+            max-width: 768px;
+            padding : 30px 30px 30px 0px;
+        }
+        .tip-amount{
+            padding-left: 30px;
+            padding-top: 50px;
+            height:100%;
+            width:100%;
+            background-color: rgb(27 70 74);
+            border-radius: 15px;
+            position: relative;
+        }
+        .bill-amount{
+            height:100%;
+            width:100%;
+            padding-left:40px;
+            padding-top: 5px;
+        }
     }
-
-    .tip-amount{
-        padding-left: 30px;
-        padding-top: 50px;
-        height:100%;
-        width:100%;
-        background-color: rgb(27 70 74);
-        border-radius: 15px;
-        position: relative;
-    }
-    
-    .bill-amount{
-        height:100%;
-        width:100%;
-        padding-left:40px;
-        padding-top: 5px;
+    @media only screen and (min-width:1px) and (max-width : 768px){
+        .tip-box{
+            margin-top: 50px;
+            height: fit-content;
+            border-radius: 20px 20px 0 0;
+            background-color:white;
+            width:100%;
+            max-width: 768px;
+            padding : 30px 30px 30px 0px;
+        }
+        .tip-amount{
+            padding-left: 30px;
+            padding-top: 50px;
+            height:270px;
+            width:100%;
+            background-color: rgb(27 70 74);
+            border-radius: 15px;
+            position: relative;
+            margin-left:15px;
+        }
+        .symbol{
+            padding-top:55px;
+        }
+        .bill-amount{
+            height:100%;
+            width:100%;
+            padding-left:30px;
+            padding-top: 5px;
+        }
     }
     
     input{
@@ -93,7 +122,7 @@
     .final-amount{
         font-size: 35px;
         font-weight: 900;
-        text-align: right !important;
+        // text-align: right !important;
         color:rgb(96,196,174);
     }
 
@@ -126,5 +155,5 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
 }

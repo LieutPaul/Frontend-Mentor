@@ -11,10 +11,10 @@ export default function TipCalculator() {
 
     return (
         <div className='tip-calculator flex flex-column justify-center items-center'>
-            <img src={logo} alt="symbol"/>
+            <img src={logo} alt="symbol" className='symbol'/>
             <div className='tip-box'>
                 <div className='row h'>
-                    <div className='col-6'>
+                    <div className='col-md-6 col-12'>
                         <div className='bill-amount'>
                             
                             Bill
@@ -86,44 +86,44 @@ export default function TipCalculator() {
                         </div>
                     </div>
                     
-                    <div className='col-6 h'>
+                    <div className='col-md-6 col-12 h'>
                         <div className='tip-amount'>
 
                             <div className='row' style={{"color":"white"}}>
-                                <div className='col-4 text-left mt-auto mb-auto'>
+                                <div className='col-sm-4 col-5 text-left mt-auto mb-auto'>
                                     Tip Amount <br></br> <small>/ person</small>
                                 </div>
-                                <div className='col text-right pe-4 final-amount'>
-                                    <div className='flex justify-right items-center'>
-                                        <BiDollar/> 
-                                        {
-                                            (bill === 0 || people === 0)
-                                            ?
-                                                0.00
-                                            : 
-                                                ((tipPercentage/100) * (bill/people)).toFixed(2)
-                                        }
-                                    </div> 
+                                <div className='col pe-4 final-amount text-right flex items-center'>
+                                    
+                                    <BiDollar/> 
+                                    {
+                                        (bill === 0 || people === 0)
+                                        ?
+                                            0.00
+                                        : 
+                                            ((tipPercentage/100) * (bill/people)).toFixed(2)
+                                    }
+                                   
                                 </div>
 
                             </div>
 
                             <div className='row mt-4' style={{"color":"white"}}>
 
-                                <div className='col-4 text-left mt-auto mb-auto'>
+                                <div className='col-sm-4 col-5 text-left mt-auto mb-auto'>
                                     Total <br></br> <small>/ person</small>
                                 </div>
-                                <div className='col text-right pe-4 final-amount'>
-                                    <div className='flex justify-right items-center'>
-                                        <BiDollar/> 
-                                        {
-                                            (bill === 0 || people === 0)
-                                            ?
-                                                0.00
-                                            : 
-                                                (((tipPercentage/100)+1) * (bill/people)).toFixed(2)    
-                                        }
-                                    </div> 
+                                <div className='col text-right pe-4 final-amount flex justify-right items-center'>
+                                    
+                                    <BiDollar/> 
+                                    {
+                                        (bill === 0 || people === 0)
+                                        ?
+                                            0.00
+                                        : 
+                                            (((tipPercentage/100)+1) * (bill/people)).toFixed(2)    
+                                    }
+                                    
                                 </div>
 
                             </div>
