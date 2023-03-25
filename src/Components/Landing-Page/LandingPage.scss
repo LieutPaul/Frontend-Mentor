@@ -26,4 +26,16 @@
         background-color: rgb(61 99 240);
         width:30%;
     }
+    .bottom-part{
+        background-color: rgb(248,248,254);
+        height:100%;
+    }
+    .testimonial{
+        background-color: white;
+        height:fit-content;
+        min-width:100px;
+        width:60%;
+        padding: 30px 30px 30px 30px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    }
 }

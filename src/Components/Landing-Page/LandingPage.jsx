@@ -1,10 +1,17 @@
 import React from 'react';
-import './LandingPage.scss'
-import symbol from './images/logo.svg'
-import filesImage from './images/illustration-1.svg'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {ImQuotesLeft} from 'react-icons/im'
+
+import './LandingPage.scss'
+
+import symbol from './images/logo.svg'
+import filesImage from './images/illustration-1.svg'
+import peopleImage from './images/illustration-2.svg'
+import curve from './images/bg-curve-desktop.svg'
+import arrow from './images/icon-arrow.svg';
+import avatarTestimonial from './images/avatar-testimonial.jpg';
 
 export default function LandingPage() {
     return (
@@ -38,26 +45,52 @@ export default function LandingPage() {
                     <img className="img-fluid" src={filesImage} alt="files"/>
                 </div>
             </div>
+            
+            <div className='w-full mt-4' style={{"backgroundRepeat":"no-repeat"}}>
+                <img src={curve} alt="curve"></img>
+            </div>
+            
+            <div className='bottom-part'>
+              <div className='row'>
+                  <div className='col-8 flex flex-col justify-center items-center'>
+                    <div className='heading'>
+                        Stay productive, wherever you are
+                    </div>
+                    <div className='sub-heading mt-4'>
+                        Never let location be an issue when accessing your files. Fylo has you 
+                        covered for all of your file storage needs.
+                        <br></br><br></br>
+                        Securely share files and folders with friends, family and colleagues for 
+                        live collaboration. No email attachments required!
+                        <br></br><br></br>
+                        <span style={{"color":"rgb(75,181,67)","display":"flex"}}>
+                          <u>See how Flyo Works&nbsp;<img style={{"float":"right","marginTop":"5px"}} alt="arrow" src={arrow}></img></u>
+                        </span>
+                        <div className='testimonial mt-4'>
+                            <ImQuotesLeft/>
+                            <br></br>
+                            Fylo has improved our team productivity by an order of magnitude. Since 
+                            making the switch our team has become a well-oiled collaboration machine.
+                            <div className='row testimonial-name mt-3'>
+                                <div className='col-3'>
+                                    <img src={avatarTestimonial} className="img-fluid" style={{"float":"left", "borderRadius":"50%"}} alt="avatar"/>
+                                </div>
+                                
+                                Kyle Burton<br></br>
+                                Founder & CEO, Huddle
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div className='col-4'>
+                      <img className='img-fluid' src={peopleImage} alt="people"/>
+                  </div>
+                  
+              </div>
+            </div>
         </div>
     )
 }
-
-
-//   Stay productive, wherever you are
-
-//   Never let location be an issue when accessing your files. Fylo has you 
-//   covered for all of your file storage needs.
-
-//   Securely share files and folders with friends, family and colleagues for 
-//   live collaboration. No email attachments required!
-
-//   See how Fylo works
-
-//   Fylo has improved our team productivity by an order of magnitude. Since 
-//   making the switch our team has become a well-oiled collaboration machine.
-
-//   Kyle Burton
-//   Founder & CEO, Huddle
 
 //   Get early access today
 
