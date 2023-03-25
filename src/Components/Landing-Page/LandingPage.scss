@@ -2,7 +2,28 @@
     height:100%;
     min-height: 100vh;
     background-repeat: no-repeat;
+    overflow-x: hidden;
     .ml{
         margin-left:2.5em;
+    }
+    .heading{
+        font-size: 2.5rem;
+        width:80%;
+    }
+    .sub-heading{
+        width:80%;
+    }
+    input{
+        border:1px black solid;
+        border-radius: 2.5px;
+        height:40px;
+        padding-left: 15px;
+        width:70%;
+    }
+    button{
+        border-radius: 2.5px;
+        color: rgb(255,255,255,0.9);
+        background-color: rgb(61 99 240);
+        width:30%;
     }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './LandingPage.scss'
 import symbol from './images/logo.svg'
+import filesImage from './images/illustration-1.svg'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,22 +19,29 @@ export default function LandingPage() {
                   </Nav>
               </Container>
             </Navbar>
+            <div className='row mt-4'>
+                <div className='col-7 flex flex-column justify-center items-center'>
+                    <div className='heading text-left'>
+                        All your files in one secure location, accessible anywhere.
+                    </div>
+                    <div className='sub-heading mt-4 text-left'>
+                      Fylo stores your most important files in one secure location. 
+                      Access them wherever you need, share and collaborate with friend, 
+                      family, and co-workers.
+                    </div>
+                    <div className='sub-heading mt-4 flex'>
+                        <input placeholder='Enter your Email'/>
+                        <button className='ml-4'>Get Started</button>
+                    </div>
+                </div>
+                <div className='col-5'>
+                    <img className="img-fluid" src={filesImage} alt="files"/>
+                </div>
+            </div>
         </div>
     )
 }
 
-
-//   Features
-//   Team
-//   Sign In
-
-//   All your files in one secure location, accessible anywhere.
-
-//   Fylo stores your most important files in one secure location. 
-//   Access them wherever you need, share and collaborate with friends, 
-//   family, and co-workers.
-
-//   Get Started
 
 //   Stay productive, wherever you are
 
