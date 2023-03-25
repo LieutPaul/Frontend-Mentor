@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import SignupForm from './Components/SignUp-Form/SignupForm';
 import TipCalculator from './Components/Tip-Calculator/TipCalculator';
+import LandingPage from './Components/Landing-Page/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,12 +21,16 @@ root.render(
           <a href="/signup-form">/signup-form</a> : Sign up Form
           <br></br>
           <a href="/tip-calculator">/tip-calculator</a> : Tip Calculator
+          <br></br>
+          <a href="/landing-page">/landing-page</a> : Landing Page
         </div>
         } 
         />
         <Route path="/order-summary" element={<OrderSummary/>}/>
         <Route path="/signup-form" element={<SignupForm/>}/>
         <Route path="/tip-calculator" element={<TipCalculator/>}/>
+        <Route path="/landing-page" element={<LandingPage/>}/>
+
       </Routes>
     </Router>
 );
