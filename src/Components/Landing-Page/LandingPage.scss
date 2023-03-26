@@ -29,6 +29,7 @@
     .bottom-part{
         background-color: rgb(248,248,254);
         height:100%;
+        padding-bottom: 80px;
     }
     .testimonial{
         background-color: white;
@@ -38,4 +39,17 @@
         padding: 30px 30px 30px 30px;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     }
+    .early-access-box{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color:rgb(87 89 133);
+        color:white;
+    }
+    .footer{
+        background-color: rgb(7,4,56);
+        color: rgb(220,220,243);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
+// 220 220 243

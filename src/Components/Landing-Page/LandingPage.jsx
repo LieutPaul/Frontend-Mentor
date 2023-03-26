@@ -2,11 +2,14 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {ImQuotesLeft} from 'react-icons/im'
+import {ImQuotesLeft} from 'react-icons/im';
+import {FaInstagram,FaFacebook,FaTwitter} from 'react-icons/fa'
+import phone from './images/icon-phone.svg';
+import email from './images/icon-email.svg';
+import './LandingPage.scss';
 
-import './LandingPage.scss'
-
-import symbol from './images/logo.svg'
+import symbol from './images/logo.svg';
+import whiteSymbol from './images/white-logo.png';
 import filesImage from './images/illustration-1.svg'
 import peopleImage from './images/illustration-2.svg'
 import curve from './images/bg-curve-desktop.svg'
@@ -16,6 +19,7 @@ import avatarTestimonial from './images/avatar-testimonial.jpg';
 export default function LandingPage() {
     return (
         <div className='landing-page'>
+
             <Navbar className=''>
               <Container>
                 <Navbar.Brand className='mt-4'><img src={symbol} alt="symbol"/></Navbar.Brand>
@@ -26,6 +30,7 @@ export default function LandingPage() {
                   </Nav>
               </Container>
             </Navbar>
+
             <div className='row mt-4'>
                 <div className='col-7 flex flex-column justify-center items-center'>
                     <div className='heading text-left'>
@@ -71,11 +76,10 @@ export default function LandingPage() {
                             <br></br>
                             Fylo has improved our team productivity by an order of magnitude. Since 
                             making the switch our team has become a well-oiled collaboration machine.
-                            <div className='row testimonial-name mt-3'>
+                            <div className='row testimonial-name mt-3 flex items-center'>
                                 <div className='col-3'>
                                     <img src={avatarTestimonial} className="img-fluid" style={{"float":"left", "borderRadius":"50%"}} alt="avatar"/>
                                 </div>
-                                
                                 Kyle Burton<br></br>
                                 Founder & CEO, Huddle
                             </div>
@@ -85,28 +89,91 @@ export default function LandingPage() {
                   <div className='col-4'>
                       <img className='img-fluid' src={peopleImage} alt="people"/>
                   </div>
-                  
               </div>
+            </div>
+            
+            <div className='early-access-box'>
+                <div className='row'>
+                    <div className='col-6 flex flex-col justify-center items-center'>
+                        <div className='heading'>
+                            Get early access today
+                        </div>
+                        <div className='sub-heading mt-4'>
+                            It only takes a minute to sign up and our free starter tier is extremely generous. 
+                            If you have any questions, our support team would be happy to help you.
+                        </div>
+                    </div>
+                    <div className='col-6' style={{"paddingTop":"12.5px"}}>
+                        <div>
+                            <input placeholder='email@example.com'/>
+                        </div>
+                        <div>
+                            <button className='mt-4 pt-2 pb-2'>Get Started For Free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='footer'>
+
+                <div className='row'>
+                    
+                    <div className='col-3 flex flex-column items-center'>
+                        <div className='mt-4 flex justify-left'>
+                            <img src={whiteSymbol} alt="whiteSymbol"/>
+                        </div>
+                        <div className='mt-4 flex'>
+                            <span><img src={phone} alt="phone" style={{"float":"left","marginTop":"5px"}}/> &nbsp; &nbsp; Phone: +1-543-123-4567</span>
+                        </div>
+                        <div className='mt-4 flex'>
+                            <span><img src={email} alt="email" style={{"float":"left","marginTop":"5px"}}/> &nbsp; &nbsp; Email: example@fylo.com</span>
+                        </div>
+                    </div>
+
+                    <div className='col-3 flex flex-column items-center'>
+                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                            <img src={whiteSymbol} alt="whiteSymbol"/>
+                        </div>
+                        <div className='mt-4'>
+                            About Us
+                        </div>
+                        <div className='mt-4'>
+                            Jobs
+                        </div>
+                        <div className='mt-4'>
+                            Press
+                        </div>
+                        <div className='mt-4'>
+                            Blog
+                        </div>
+                    </div>
+
+                    <div className='col-3 flex flex-column items-center'>
+                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                            <img src={whiteSymbol} alt="whiteSymbol"/>
+                        </div>
+                        <div className='mt-4'>
+                            Contact Us
+                        </div>
+                        <div className='mt-4'>
+                            Terms
+                        </div>
+                        <div className='mt-4'>
+                            Privacy
+                        </div>
+                    </div>
+                    
+                    <div className='col-3 flex flex-column items-left'>
+                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                            <img src={whiteSymbol} alt="whiteSymbol"/>
+                        </div>
+                        <div className='text-white mt-4 flex'>
+                            <FaFacebook size={25}/> &nbsp; &nbsp; <FaTwitter size={25}/> &nbsp; &nbsp; <FaInstagram size={25}/>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     )
 }
-
-//   Get early access today
-
-//   It only takes a minute to sign up and our free starter tier is extremely generous. 
-//   If you have any questions, our support team would be happy to help you.
-
-//   Get Started For Free
-
-//   Phone: +1-543-123-4567
-//   example@fylo.com
-
-//   About Us
-//   Jobs
-//   Press
-//   Blog
-
-//   Contact Us
-//   Terms
-//   Privacy
