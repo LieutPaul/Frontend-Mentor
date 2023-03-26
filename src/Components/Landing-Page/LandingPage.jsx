@@ -37,9 +37,9 @@ export default function LandingPage() {
               </Container>
             </Navbar>
 
-            <div className='row mt-4'>
-                <div className='col-7 flex flex-column justify-center items-center'>
-                    <div className='heading text-left'>
+            <div className='row mt-4 flex-column-reverse flex-md-row'>
+                <div className='col-md-7 col-12 flex flex-column justify-center items-center'>
+                    <div className='heading'>
                         All your files in one secure location, accessible anywhere.
                     </div>
                     <div className='sub-heading mt-4 text-left'>
@@ -47,9 +47,9 @@ export default function LandingPage() {
                       Access them wherever you need, share and collaborate with friend, 
                       family, and co-workers.
                     </div>
-                    <div className='sub-heading mt-4 flex'>
+                    <div className='input-group mt-4 flex'>
                         <input placeholder='Enter your Email'/>
-                        <button className='ml-4' onChange={(e)=>setEmail(e.target.value)} onClick={()=>{
+                        <button onChange={(e)=>setEmail(e.target.value)} onClick={()=>{
                             if(validateEmail(email)===false){
 
                             }
@@ -58,7 +58,7 @@ export default function LandingPage() {
                         </button>
                     </div>
                 </div>
-                <div className='col-5'>
+                <div className='col-md-5 col-12'>
                     <img className="img-fluid" src={filesImage} alt="files"/>
                 </div>
             </div>
@@ -68,8 +68,8 @@ export default function LandingPage() {
             </div>
             
             <div className='bottom-part'>
-              <div className='row'>
-                  <div className='col-8 flex flex-col justify-center items-center'>
+              <div className='row flex-column-reverse flex-md-row'>
+                  <div className='col-md-8 col-12 flex flex-col justify-center items-center'>
                     <div className='heading'>
                         Stay productive, wherever you are
                     </div>
@@ -98,7 +98,7 @@ export default function LandingPage() {
                         </div>
                     </div>
                   </div>
-                  <div className='col-4'>
+                  <div className='col-md-4 col-12'>
                       <img className='img-fluid' src={peopleImage} alt="people"/>
                   </div>
               </div>
@@ -106,7 +106,7 @@ export default function LandingPage() {
             
             <div className='early-access-box'>
                 <div className='row'>
-                    <div className='col-6 flex flex-col justify-center items-center'>
+                    <div className='col-md-6 col-12 flex flex-col justify-center items-center'>
                         <div className='heading'>
                             Get early access today
                         </div>
@@ -115,11 +115,11 @@ export default function LandingPage() {
                             If you have any questions, our support team would be happy to help you.
                         </div>
                     </div>
-                    <div className='col-6' style={{"paddingTop":"12.5px"}}>
-                        <div>
+                    <div className='col-md-6 col-12 started-for-free' style={{"paddingTop":"12.5px"}}>
+                        <div className='md-w-80'>
                             <input placeholder='email@example.com'/>
                         </div>
-                        <div>
+                        <div className='md-w-80'>
                             <button className='mt-4 pt-2 pb-2'>Get Started For Free</button>
                         </div>
                     </div>
