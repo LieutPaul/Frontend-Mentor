@@ -3,15 +3,23 @@
     min-height: 100vh;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    .nav{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 500;
+    }
     .ml{
         margin-left:2.5em;
     }
     .heading{
         font-size: 2.5rem;
         width:80%;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 900;
     }
     .sub-heading{
         width:80%;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 500;
     }
     input{
         border:1px black solid;
@@ -19,12 +27,24 @@
         height:40px;
         padding-left: 15px;
         width:70%;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 500;
+        color:black;
+    }
+    .light-green-hover:hover{
+        color:lightgreen;
+        cursor: pointer;
     }
     button{
         border-radius: 2.5px;
         color: rgb(255,255,255,0.9);
         background-color: rgb(61 99 240);
         width:30%;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 500;
+    }
+    button:hover{
+        background-color: rgb(115 156 244);
     }
     .bottom-part{
         background-color: rgb(248,248,254);
@@ -38,6 +58,8 @@
         width:60%;
         padding: 30px 30px 30px 30px;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 200;
     }
     .early-access-box{
         padding-top: 50px;
@@ -48,8 +70,26 @@
     .footer{
         background-color: rgb(7,4,56);
         color: rgb(220,220,243);
-        padding-top: 40px;
+        padding-top: 20px;
         padding-bottom: 40px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 200;
+    }
+    .facebookSymbol:hover{
+        color: rgb(66 103 178);
+        cursor:pointer;
+    }
+    .twitterSymbol:hover{
+        color: rgb(29 161 242);
+        cursor:pointer;
+    }
+    .instaSymbol:hover{
+        color: rgb(233, 89, 80);
+        cursor:pointer;
+    }
+    .footerHover:hover{
+        color:rgb(87 89 133);
+        cursor:pointer;
     }
 }
-// 220 220 243
+// 115 156 244

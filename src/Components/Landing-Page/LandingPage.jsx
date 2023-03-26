@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {ImQuotesLeft} from 'react-icons/im';
 import {FaInstagram,FaFacebook,FaTwitter} from 'react-icons/fa'
 import phone from './images/icon-phone.svg';
-import email from './images/icon-email.svg';
+import emailImg from './images/icon-email.svg';
 import './LandingPage.scss';
 
 import symbol from './images/logo.svg';
@@ -17,10 +17,16 @@ import arrow from './images/icon-arrow.svg';
 import avatarTestimonial from './images/avatar-testimonial.jpg';
 
 export default function LandingPage() {
+    const [email,setEmail] = React.useState("");
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
     return (
         <div className='landing-page'>
 
-            <Navbar className=''>
+            <Navbar className='nav'>
               <Container>
                 <Navbar.Brand className='mt-4'><img src={symbol} alt="symbol"/></Navbar.Brand>
                   <Nav className='mt-3'>
@@ -43,7 +49,13 @@ export default function LandingPage() {
                     </div>
                     <div className='sub-heading mt-4 flex'>
                         <input placeholder='Enter your Email'/>
-                        <button className='ml-4'>Get Started</button>
+                        <button className='ml-4' onChange={(e)=>setEmail(e.target.value)} onClick={()=>{
+                            if(validateEmail(email)===false){
+
+                            }
+                        }}>
+                            Get Started
+                        </button>
                     </div>
                 </div>
                 <div className='col-5'>
@@ -69,7 +81,7 @@ export default function LandingPage() {
                         live collaboration. No email attachments required!
                         <br></br><br></br>
                         <span style={{"color":"rgb(75,181,67)","display":"flex"}}>
-                          <u>See how Flyo Works&nbsp;<img style={{"float":"right","marginTop":"5px"}} alt="arrow" src={arrow}></img></u>
+                          <a className='light-green-hover' href="#works"><u>See how Flyo Works&nbsp;<img style={{"float":"right","marginTop":"5px"}} alt="arrow" src={arrow}></img></u></a>
                         </span>
                         <div className='testimonial mt-4'>
                             <ImQuotesLeft/>
@@ -126,49 +138,51 @@ export default function LandingPage() {
                             <span><img src={phone} alt="phone" style={{"float":"left","marginTop":"5px"}}/> &nbsp; &nbsp; Phone: +1-543-123-4567</span>
                         </div>
                         <div className='mt-4 flex'>
-                            <span><img src={email} alt="email" style={{"float":"left","marginTop":"5px"}}/> &nbsp; &nbsp; Email: example@fylo.com</span>
-                        </div>
-                    </div>
-
-                    <div className='col-3 flex flex-column items-center'>
-                        <div className='mt-4' style={{"visibility": "hidden"}}>
-                            <img src={whiteSymbol} alt="whiteSymbol"/>
-                        </div>
-                        <div className='mt-4'>
-                            About Us
-                        </div>
-                        <div className='mt-4'>
-                            Jobs
-                        </div>
-                        <div className='mt-4'>
-                            Press
-                        </div>
-                        <div className='mt-4'>
-                            Blog
-                        </div>
-                    </div>
-
-                    <div className='col-3 flex flex-column items-center'>
-                        <div className='mt-4' style={{"visibility": "hidden"}}>
-                            <img src={whiteSymbol} alt="whiteSymbol"/>
-                        </div>
-                        <div className='mt-4'>
-                            Contact Us
-                        </div>
-                        <div className='mt-4'>
-                            Terms
-                        </div>
-                        <div className='mt-4'>
-                            Privacy
+                            <span><img src={emailImg} alt="email" style={{"float":"left","marginTop":"5px"}}/> &nbsp; &nbsp; Email: examp@fylo.com</span>
                         </div>
                     </div>
                     
-                    <div className='col-3 flex flex-column items-left'>
+                    <div className='col-1'></div>
+                    
+                    <div className='col-2 flex flex-column'>
+                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                            <img src={whiteSymbol} alt="whiteSymbol"/>
+                        </div>
+                        <div className='mt-4 text-left'>
+                            <a href="#footer" className='footerHover'>About Us</a>
+                        </div>
+                        <div className='mt-4 text-left'>
+                            <a href="#footer" className='footerHover'>Jobs</a>
+                        </div>
+                        <div className='mt-4 text-left'>
+                            <a href="#footer" className='footerHover'>Press</a>
+                        </div>
+                        <div className='mt-4 text-left'>
+                            <a href="#footer" className='footerHover'>Blog</a>
+                        </div>
+                    </div>
+                    <div className='col-1'></div>
+                    <div className='col-2 flex flex-column'>
+                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                            <img src={whiteSymbol} alt="whiteSymbol"/>
+                        </div>
+                        <div className='mt-4'>
+                            <a href="#footer" className='footerHover'>Contact Us</a>
+                        </div>
+                        <div className='mt-4'>
+                            <a href="#footer" className='footerHover'>Terms</a>
+                        </div>
+                        <div className='mt-4'>
+                            <a href="#footer" className='footerHover'>Privacy</a>
+                        </div>
+                    </div>
+                    
+                    <div className='col-3 flex flex-column items-right'>
                         <div className='mt-4' style={{"visibility": "hidden"}}>
                             <img src={whiteSymbol} alt="whiteSymbol"/>
                         </div>
                         <div className='text-white mt-4 flex'>
-                            <FaFacebook size={25}/> &nbsp; &nbsp; <FaTwitter size={25}/> &nbsp; &nbsp; <FaInstagram size={25}/>
+                            <FaFacebook className='facebookSymbol' size={25}/> &nbsp; &nbsp; <FaTwitter className='twitterSymbol' size={25}/> &nbsp; &nbsp; <FaInstagram className='instaSymbol' size={25}/>
                         </div>
                     </div>
 
