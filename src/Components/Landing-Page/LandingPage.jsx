@@ -1,7 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import {ImQuotesLeft} from 'react-icons/im';
 import {FaInstagram,FaFacebook,FaTwitter} from 'react-icons/fa'
 import phone from './images/icon-phone.svg';
@@ -18,6 +15,7 @@ import avatarTestimonial from './images/avatar-testimonial.jpg';
 
 export default function LandingPage() {
     const [email,setEmail] = React.useState("");
+
     function validateEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
@@ -26,16 +24,22 @@ export default function LandingPage() {
     return (
         <div className='landing-page'>
 
-            <Navbar className='nav'>
-              <Container>
-                <Navbar.Brand className='mt-4'><img src={symbol} alt="symbol"/></Navbar.Brand>
-                  <Nav className='mt-3'>
-                    <Nav.Link className="text-black ml" href="#">Features</Nav.Link>
-                    <Nav.Link className="text-black ml" href="#">Team</Nav.Link>
-                    <Nav.Link className="text-black ml" href="#">Sign In</Nav.Link>
-                  </Nav>
-              </Container>
-            </Navbar>
+            <div className="navbar nav">
+                <a className="navbar-brand ml-4 mt-2" href="#navbar">
+                    <img src={symbol} className='navbar-logo' alt="symbol"/>
+                </a>
+                <div className='md:mt-2' id="navbarText">
+                    <span className="navbar-text text-black">
+                        Features
+                    </span>
+                    <span className="navbar-text text-black">
+                        Team
+                    </span>
+                    <span className="navbar-text text-black">
+                        Sign In
+                    </span>
+                </div>
+            </div>
 
             <div className='row mt-4 flex-column-reverse flex-md-row'>
                 <div className='col-md-7 col-12 flex flex-column justify-center items-center'>
@@ -130,7 +134,7 @@ export default function LandingPage() {
 
                 <div className='row'>
                     
-                    <div className='col-3 flex flex-column items-center'>
+                    <div className='col-md-3 col-12 flex flex-column items-center'>
                         <div className='mt-4 flex justify-left'>
                             <img src={whiteSymbol} alt="whiteSymbol"/>
                         </div>
@@ -142,10 +146,10 @@ export default function LandingPage() {
                         </div>
                     </div>
                     
-                    <div className='col-1'></div>
+                    <div className='col-md-1 filler-col'></div>
                     
-                    <div className='col-2 flex flex-column'>
-                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                    <div className='col-md-2 col-12 flex flex-column footer-text'>
+                        <div className='mt-4 invisible-image'>
                             <img src={whiteSymbol} alt="whiteSymbol"/>
                         </div>
                         <div className='mt-4 text-left'>
@@ -161,9 +165,11 @@ export default function LandingPage() {
                             <a href="#footer" className='footerHover'>Blog</a>
                         </div>
                     </div>
-                    <div className='col-1'></div>
-                    <div className='col-2 flex flex-column'>
-                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                    
+                    <div className='col-md-1 filler-col'></div>
+
+                    <div className='col-md-2 col-12 flex flex-column footer-text'>
+                        <div className='mt-4 invisible-image'>
                             <img src={whiteSymbol} alt="whiteSymbol"/>
                         </div>
                         <div className='mt-4'>
@@ -177,8 +183,8 @@ export default function LandingPage() {
                         </div>
                     </div>
                     
-                    <div className='col-3 flex flex-column items-right'>
-                        <div className='mt-4' style={{"visibility": "hidden"}}>
+                    <div className='col-md-3 col-12 flex flex-column items-right footer-text'>
+                        <div className='mt-4 invisible-image'>
                             <img src={whiteSymbol} alt="whiteSymbol"/>
                         </div>
                         <div className='text-white mt-4 flex'>
