@@ -48,8 +48,8 @@ export default function LandingPage() {
                       family, and co-workers.
                     </div>
                     <div className='input-group mt-4 flex'>
-                        <input placeholder='Enter your Email'/>
-                        <button onChange={(e)=>setEmail(e.target.value)} onClick={()=>{
+                        <input className='email-input' placeholder='Enter your Email'/>
+                        <button className='validate-email-button' onChange={(e)=>setEmail(e.target.value)} onClick={()=>{
                             if(validateEmail(email)===false){
 
                             }
@@ -117,10 +117,10 @@ export default function LandingPage() {
                     </div>
                     <div className='col-md-6 col-12 started-for-free' style={{"paddingTop":"12.5px"}}>
                         <div className='md-w-80'>
-                            <input placeholder='email@example.com'/>
+                            <input className='email-input-2' placeholder='email@example.com'/>
                         </div>
                         <div className='md-w-80'>
-                            <button className='mt-4 pt-2 pb-2'>Get Started For Free</button>
+                            <button className='mt-4 pt-2 pb-2 validate-email-button-2'>Get Started For Free</button>
                         </div>
                     </div>
                 </div>
