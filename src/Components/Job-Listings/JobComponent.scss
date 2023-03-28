@@ -1,6 +1,40 @@
+.featured{
+    border-left: rgb(111 163 161) solid 5px;  
+}
+
 .job-component{
     background-color: white;
     width:80%;
     height:fit-content;
+    padding: 10px 0 10px 0;
     box-shadow: 5px 5px rgb(0,0,1,0.05);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    .name-of-company{
+        color:rgb(108,156,150);
+        font-weight: 600;
+    }
+    .role{
+        font-weight: 600;
+    }
+    .more-details{
+        font-weight: 500;
+        color:rgb(0,0,1,0.5);
+    }
+    .new-box{
+        color: white !important;
+        background-color: rgb(110,163,163) !important;
+        margin-left: 10px;
+        padding: 2.5px 5px 2.5px 5px;
+        border-radius: 15px;
+        font-size: small;
+    }
+    .featured-box{
+        color: white !important;
+        background-color: black !important;
+        margin-left: 10px;
+        padding: 2.5px 5px 2.5px 5px;
+        border-radius: 15px;
+        font-size: small;
+    }
 }
