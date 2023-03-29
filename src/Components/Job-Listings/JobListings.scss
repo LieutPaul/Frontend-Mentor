@@ -10,7 +10,7 @@
     .mobile-header{
         background-color: rgb(110,163,163);
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
     }
     .filters{
         width: 80%;
@@ -19,7 +19,7 @@
         position: absolute;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+        overflow: auto;
     }
     @media screen and (min-width:769px){
         .mobile-header{
@@ -35,7 +35,6 @@
         }
         .filters{
             padding : 40px 20px 40px 20px;
-            overflow: auto;
         }
     }
     

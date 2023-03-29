@@ -1,6 +1,5 @@
 import React from 'react'
 import './LanguageComponent.scss'
-
 export default function LanguageComponent(props) {
 
     return (
@@ -11,16 +10,16 @@ export default function LanguageComponent(props) {
                         return [...prev,props.text];
                     })
                 }
-            }else{
+            }
+        }}>
+            {props.text}
+            {props.role==="filter" && <span onClick={()=>{
                 props.changeFilters(prev => {
                     return prev.filter(prevValue => {
                         return prevValue !== props.text;
                     })
                 })
-            }
-            
-        }}>
-            {props.text}
+            }} className='cross'>X</span>}
         </span>
     )
 }

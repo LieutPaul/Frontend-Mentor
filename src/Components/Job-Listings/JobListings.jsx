@@ -36,20 +36,24 @@ export default function JobListings() {
             
             <div className='relative flex justify-center items-end desktop-header'>
                 <img src={desktop_header} alt="desktop-header"/>
-                <div className='filters flex'>
-                    {filters.map((filter,key) => {
-                        return <LanguageComponent key={key} text={filter} changeFilters={changeFilters} filters={filters} role="filter"/>
-                    })}
-                </div>
+                {filters.length>0 &&
+                    <div className='filters flex'>
+                        {filters.map((filter,key) => {
+                            return <LanguageComponent key={key} text={filter} changeFilters={changeFilters} filters={filters} role="filter"/>
+                        })}
+                    </div>
+                }
             </div>
 
             <div className="relative flex justify-center items-end mobile-header">
                 <img src={mobile_header} alt="mobile-header"/>
-                <div className='filters flex'>
-                    {filters.map((filter,key) => {
-                        return <LanguageComponent key={key} changeFilters={changeFilters} filters={filters} text={filter} role="filter"/>
-                    })}
-                </div>
+                {filters.length>0 && 
+                    <div className='filters flex'>
+                        {filters.map((filter,key) => {
+                            return <LanguageComponent key={key} changeFilters={changeFilters} filters={filters} text={filter} role="filter"/>
+                        })}
+                    </div>
+                }
             </div>
             
             {renderedJobs.map((job,index) => {
