@@ -3,7 +3,7 @@ import './JobComponent.scss';
 import {BsDot} from 'react-icons/bs';
 import LanguageComponent from './LanguageComponent';
 
-export default function JobComponent({job,changeFilters}) {
+export default function JobComponent({job,changeFilters,filters}) {
     return (
         <div className={`row job-component mt-4 ${job.featured === true && "featured"}`}>
                 
@@ -31,10 +31,10 @@ export default function JobComponent({job,changeFilters}) {
 
                 <div className='col-md-6 col-12 flex flex-column justify-center language-components'>
                     <div>
-                        <LanguageComponent text={job.role} changeFilters={changeFilters}/>
-                        <LanguageComponent text={job.level} changeFilters={changeFilters}/>
+                        <LanguageComponent text={job.role} changeFilters={changeFilters} filters={filters} role="role"/>
+                        <LanguageComponent text={job.level} changeFilters={changeFilters} filters={filters} role="role"/>
                         {job.languages.map((language,index) => {
-                            return <LanguageComponent text={language} key={index} changeFilters={changeFilters}/>
+                            return <LanguageComponent text={language} key={index} changeFilters={changeFilters} filters={filters} role="role"/>
                         })}
                     </div>
                 </div>

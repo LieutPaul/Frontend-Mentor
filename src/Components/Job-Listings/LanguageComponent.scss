@@ -9,8 +9,20 @@
     display: inline-block;
     font-weight: 600;
 }
+
 .language:hover{
     background-color: rgb(110,163,163);;
     color:white;
     cursor: pointer;
+}
+
+.filter{
+    background-color:rgb(233,246,242);
+    color:rgb(108,156,150);
+    padding: 5px 10px 5px 10px;
+    border-radius:3px;
+    margin-right:15px;
+    word-wrap: break-word;
+    display: inline-block;
+    font-weight: 600;
 }
