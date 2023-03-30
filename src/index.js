@@ -9,6 +9,7 @@ import TipCalculator from './Components/Tip-Calculator/TipCalculator';
 import LandingPage from './Components/Landing-Page/LandingPage';
 // import TitlePage from './TitlePage';
 import JobListings from './Components/Job-Listings/JobListings';
+import QRCode from './Components/QR-Code/QRCode';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +28,8 @@ root.render(
           <a href="/landing-page">/landing-page</a> : Landing Page
           <br></br>
           <a href="/job-listings">/job-listings</a> : Static Job Listings Page
+          <br></br>
+          <a href="/qr-code">/qr-code</a> : QR Code Page
         </div>
         } 
         />
@@ -36,6 +39,7 @@ root.render(
         <Route path="/tip-calculator" element={<TipCalculator/>}/>
         <Route path="/landing-page" element={<LandingPage/>}/>
         <Route path="/job-listings" element={<JobListings/>}/>
+        <Route path="/qr-code" element={<QRCode/>}/>
       </Routes>
     </Router>
 );
