@@ -2,22 +2,18 @@
     height: 100%;
     min-height: 100vh;
     background-color: rgb(240,240,240);
+    font-family: 'Poppins', sans-serif;
     .calculator{
         width: 90%;
         max-width: 700px;
         background-color: white;
-        padding: 40px 40px 40px 40px; /*Put in Media Query*/
         border-radius: 15px 15px 100px 15px;
     } 
     input{
-        height: 60px;
         border: 1.5px rgb(0,0,1,0.15) solid;
         border-radius: 5px;
-        padding-left: 20px;
-        width:145px; // MQ
-        font-weight: 900; 
-        font-size: 25px;
-        margin-right: 30px;
+        width:80%;
+        font-weight: 900;
     }
     input,label{
         display: block;
@@ -25,6 +21,9 @@
     label{
         font-weight: 700;
         color:rgb(0,0,1,0.5)
+    }
+    small{
+        font-weight: 900;
     }
     .symbol-div{
         width: 100%;
@@ -34,21 +33,67 @@
     }
     .symbol{
         background-color: rgb(125,80,246);
-        width:80px;
         border-radius: 50%;
-        // padding: 50px 50px 50px 50px;
     }
     .symbol:hover{
         cursor: pointer;
         background-color: black;
     }
     .age{
-        font-size: calc(0.25rem + 6vw); // use MQ, 1rem for mobile screen
         color:rgb(125,80,246);
         font-weight: 900;
     }
     .age-text{
         font-size: calc(0.25rem + 5vw);
         font-weight: 900;
+    }
+
+    @media screen and (min-width : 769px){
+        .calculator{
+            padding: 40px 40px 40px 40px;
+        }
+        .age{
+            font-size: calc(0.25rem + 6vw);
+        }
+        .age-text{
+            font-size: calc(0.25rem + 5vw);
+        }
+        .symbol{
+            width:80px;
+        }
+        .arrow{
+            margin:20px 20px 20px 20px;
+        }
+        input{
+            height: 60px;
+            margin-right: 30px;
+            padding-left: 20px; 
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (min-width : 1px) and (max-width:768px){
+        .calculator{
+            padding: 30px 30px 30px 30px;
+        }
+        .age{
+            font-size: calc(1.5rem + 6vw);
+        }
+        .age-text{
+            font-size: calc(1.5rem + 5vw);
+        }
+        .symbol{
+            width:60px;
+            height:60px;
+        }
+        .arrow{
+            margin:10px 10px 10px 10px;
+        }
+        input{
+            height: 50px;
+            margin-right: 10px;
+            padding-left: 10px;
+            font-size: 17.5px;
+        }
     }
 }

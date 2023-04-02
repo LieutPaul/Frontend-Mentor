@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import logo from './images/icon-arrow.svg'
-
 import './AgeCalculator.scss'
 
 export default function AgeCalculator() {
@@ -28,7 +27,6 @@ export default function AgeCalculator() {
             days: days
         };
     }
-
       
     const [day,changeDay] = useState(null);
     const [month,changeMonth] = useState(null);
@@ -59,23 +57,29 @@ export default function AgeCalculator() {
                     </div>
                     <div className='symbol flex justify-center' onClick={()=>{
                         var birthDate = new Date(`${year}-${month}-${day}`);
-                        // var age = calculateAge(birthDate);
+                        var age = calculateAge(birthDate);
                         changeAge(calculateAge(birthDate));
-                        // console.log(age.years + ' years, ' + age.months + ' months, ' + age.days + ' days');
+                        console.log(age.years + ' years, ' + age.months + ' months, ' + age.days + ' days');
                     }}>
-                        <img style={{"margin":"20px 20px 20px 20px"}} src={logo} alt="arrow"/>
+                        <img className="arrow" src={logo} alt="arrow"/>
                     </div>
                 </div>
                 
 
                 <div>
-                    <span className='age'>{(age===null || isNaN(age)) ? "--" : age.years}</span><span className='age-text'> years</span>
+                    <span className='age'>
+                    {(age===null || isNaN(age.years) || isNaN(age.months) || isNaN(age.days)) ? "--" : age.years}</span>
+                    <span className='age-text'> years</span>
                 </div>
                 <div>
-                    <span className='age'>{(age===null || isNaN(age)) ? "--" : age.months}</span><span className='age-text'> months</span>
+                    <span className='age'>
+                    {(age===null || isNaN(age.years) || isNaN(age.months) || isNaN(age.days)) ? "--" : age.months}</span>
+                    <span className='age-text'> months</span>
                 </div>
                 <div>
-                    <span className='age'>{(age===null || isNaN(age)) ? "--" : age.days}</span><span className='age-text'> days</span>
+                    <span className='age'>
+                    {(age===null || isNaN(age.years) || isNaN(age.months) || isNaN(age.days)) ? "--" : age.days}</span>
+                    <span className='age-text'> days</span>
                 </div>
             </div>
         </div>
