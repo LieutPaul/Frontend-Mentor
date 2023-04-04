@@ -11,6 +11,7 @@ import LandingPage from './Components/Landing-Page/LandingPage';
 import JobListings from './Components/Job-Listings/JobListings';
 import QRCode from './Components/QR-Code/QRCode';
 import AgeCalculator from './Components/Age-Calculator/AgeCalculator';
+import Intropage from './Components/Intropage-Dropdown/Intropage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,6 +34,8 @@ root.render(
           <a href="/qr-code">/qr-code</a> : QR Code Page
           <br></br>
           <a href="/age-calculator">/age-calculator</a> : Age Calculator
+          <br></br>
+          <a href="/intro-page">/intro-page</a> : Intro Page with dropdown
         </div>
         } 
         />
@@ -44,7 +47,7 @@ root.render(
         <Route path="/job-listings" element={<JobListings/>}/>
         <Route path="/qr-code" element={<QRCode/>}/>
         <Route path='/age-calculator' element={<AgeCalculator/>} />
-        
+        <Route path="/intro-page" element={<Intropage/>}/>
       </Routes>
     </Router>
 );
