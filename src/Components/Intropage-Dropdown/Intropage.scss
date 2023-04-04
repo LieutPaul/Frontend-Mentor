@@ -2,6 +2,54 @@
     .logo{
         margin-top: 10px;
     }
+    @media screen and (max-width:450px){
+        .img-fluid{
+            width:20%;
+            height:80%;
+        }
+    }
+    @media screen and (min-width:451px) and (max-width:1199px){
+        .img-fluid{
+            width: 15%;
+            height:80%;
+        }
+    }
+
+    @media screen and (max-width:1199px){
+        .navbar{
+            display:none;
+        }
+        .desktop-hero{
+            display: none;
+        }
+        .heading{
+            font-size: calc(2vw + 2vh + 1.25vmin);
+            font-weight: 700;
+            text-align: center;
+        }
+        .hero-text{
+            text-align: center;
+        }
+    }
+    
+    @media screen and (min-width:1200px){
+        .mobile-hero{
+            display: none;
+        }
+        .clients{
+            position: absolute;
+            bottom:0;
+            padding-left: 20px;
+        }
+        .heading{
+            font-size: calc(3rem + 5vh);
+            font-weight: 700;
+            line-height: 90px;
+        }
+        .img-fluid{
+            height:30px !important;
+        }
+    }
     .navbar{
         padding: 1.25rem 1rem 1rem 2.5rem;
     }
@@ -22,11 +70,6 @@
     .desktop-hero{
         width:70%;
     }
-    .heading{
-        font-size: calc(3rem + 5vh);
-        font-weight: 700;
-        line-height: 90px;
-    }
 
     .learnmore-button{
         background-color: black;
@@ -40,14 +83,5 @@
         background-color: white;
         color:black;
         border:1px solid black;
-    }
-    
-    .clients{
-        position: absolute;
-        bottom:0;
-        padding-left: 20px;
-    }
-    .img-fluid{
-        height:30px !important;
     }
 }

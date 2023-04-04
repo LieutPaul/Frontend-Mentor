@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from './images/logo.svg'
 import './Navbar.scss'
 
 export default function Navbar() {
@@ -19,12 +20,16 @@ export default function Navbar() {
     }
 
     return (
-        <div style={{"width":"100%","height":"100vh"}}>
+        <div>
             <nav className='mobile-navbar'>
-                <div className="burger-menu" onClick={updateMenu}>
-                    <div className={burger_class}></div>
-                    <div className={burger_class}></div>
-                    <div className={burger_class}></div>
+                <img className="logo" src={logo} alt="logo"/>
+                <div className="burger-menu">
+                    <div className='w-full h-full hover:cursor-pointer flex flex-column items-end justify-between' onClick={updateMenu}>
+                        <div className={burger_class}></div>
+                        <div className={burger_class}></div>
+                        <div className={burger_class}></div>
+                    </div>
+                    
                 </div>
                 <div className={menu_class}>
                     Option 1
