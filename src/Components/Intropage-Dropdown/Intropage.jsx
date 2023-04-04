@@ -7,6 +7,7 @@ import databiz from './images/client-databiz.svg'
 import maker from './images/client-maker.svg'
 import meet from './images/client-meet.svg'
 import downarrow from './images/icon-arrow-down.svg'
+// import Navbar from './Navbar'
 export default function Intropage() {
     return (
         <div className='intropage overflow-x-hidden'>
@@ -42,5 +43,6 @@ export default function Intropage() {
                 </div>
             </div>
         </div>
+            // <Navbar/>
     )
 }
