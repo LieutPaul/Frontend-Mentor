@@ -14,7 +14,8 @@ module.exports = {
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
-
+      'blg':'1199px',
+      // => Bootstrap lg
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
 

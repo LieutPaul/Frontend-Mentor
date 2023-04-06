@@ -1,73 +1,112 @@
-.mobile-navbar {
-    width: 100%;
-    height: 5em;
-    display: flex;
-    justify-content: flex-start;
-    padding: 1em;
-    .logo{
-        width: 150px;
-    }
-    .burger-menu {
-        width: 100%;
-    }
-    
-    .burger-bar {
-        width: 4em;
-        height: 0.5em;
-        background-color: black;
-        border-radius: 0.5em;
-    }
-    
-    .menu {
-        width: 70%;
-        height: 100vh;
-        background-color: rgb(0,0,1,0.15);
-        position: absolute;
-        top: 0;
-        right:0;
-        z-index: -1;
-        padding-top: 7em;
-    }
-    
-    /* ------------- sliding menu ------------------ */
-    .hidden {
-        display: none;
-    }
-    
-    .visible {
-        display: inherit;
-    }
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 
+.navbar {
+    height: 80px;
+    background-color: white;
+    position: relative;
+    padding-left: 30px;
+    .navbar-text:hover{
+      color:black;
+      cursor: pointer;
+    }
+    .menu-icon {
+      display: none;
+    }
+    
+    .nav-elements{
+      margin-left: 3rem;
+    }
+    .nav-elements ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+    }
+    
+    .nav-elements ul li:not(:last-child) {
+      margin-right: 60px;
+    }
+    
+    .nav-elements ul a {
+      font-size: 16px;
+      font-weight: 400;
+      color: #2f234f;
+      text-decoration: none;
+    }
+    
+    .nav-elements ul a.active {
+      color: #574c4c;
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .nav-elements ul a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #574c4c;
+    }
+    .register-button{
+      color:gray;
+      border: 2px solid gray;
+      padding: 10px 10px 10px 10px;
+      border-radius: 10px;
 
-    
-    /* ----- animations--------- */
-    /* clicked */
-    .burger-bar.clicked:nth-child(1){
-        transform: rotate(45deg) translate(0.75em, 1.25em);
-        transition: ease-out 0.5s;
     }
-    
-    .burger-bar.clicked:nth-child(2){
-        transform: scale(0.1);
-        transition: ease-out 0.5s;
+    .register-button:hover{
+        border: 2px solid black;
+        color:black;
     }
-    
-    .burger-bar.clicked:nth-child(3){
-        transform: rotate(135deg) translate(-0.5em, 1em);
-        transition: ease-out 0.5s;
+    .register-button-phone{
+      color:white;
+      border: 2px solid white;
+      padding: 10px 10px 10px 10px;
+      border-radius: 10px;
     }
+    .register-button-phone:hover{
+        border: 2px solid black;
+        color:black;
+    }
+    @media (max-width: 1199px) {
+        .menu-icon {
+            margin-top: 5px;
+            display:block;
+            cursor: pointer;
+        }
+        .logo-img{
+          width: 30px !important;
+          justify-self: right;
+          float:right;
+          margin-right: 1.5rem;;
+        }
+        .nav-elements {
+            position: absolute;
+            right: 0;
+            top: 60px;
+            background-color: black;
+            width: 0px;
+            height: 100vh;
+            transition: all 0.3s ease-in;
+            overflow: hidden;
+        }
     
-    /* unclicked */
-    .burger-bar.unclicked {
-        transform: rotate(0) translate(0);
-        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+        .nav-elements.active {
+            width: 70%;
+            max-width: 400px;
+        }
+    
+        .nav-elements ul {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .nav-elements ul li {
+            margin-right: unset;
+            margin-top: 22px;
+        }
     }
 }
 
-@media screen and (min-width:1200px){
-    .mobile-navbar{
-        display:none;
-    }
-}

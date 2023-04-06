@@ -16,9 +16,6 @@
     }
 
     @media screen and (max-width:1199px){
-        .navbar{
-            display:none;
-        }
         .desktop-hero{
             display: none;
         }
@@ -50,23 +47,7 @@
             height:30px !important;
         }
     }
-    .navbar{
-        padding: 1.25rem 1rem 1rem 2.5rem;
-    }
-    .navbar-text:hover{
-        color:black;
-        cursor: pointer;
-    }
-    .register-button{
-        color:gray;
-        border: 2px solid gray;
-        padding: 10px 10px 10px 10px;
-        border-radius: 10px;
-    }
-    .register-button:hover{
-        border: 2px solid black;
-        color:black;
-    }
+
     .desktop-hero{
         width:70%;
     }
